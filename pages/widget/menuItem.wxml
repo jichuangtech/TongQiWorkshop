@@ -1,0 +1,6 @@
+<template name="menuItem" >
+  <view class="menuItemStyle" >
+    <image class="menuItemImgStyle" src="{{icon}}" />
+    <text class="menuItemTextStyle">{{name}}</text>
+  </view>
+</template>

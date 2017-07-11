@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/demo/demo",
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/me/me"
+  ],
+  "window":{ "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#aab", 
+    "navigationBarTitleText": "依七铜器",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh":true
+  },
+
+  "tabBar": {
+    "backgroundColor": "#aab", 
+    "borderStyle": "white",
+    "position": "bottom",
+    "color": "#fff",
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "Demo",
+        "iconPath": "pages/res/img/home_n.png",
+        "selectedIconPath": "pages/res/img/home_s.png"
+      }, 
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/res/img/home_n.png",
+        "selectedIconPath": "pages/res/img/home_s.png"
+      }, 
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人",
+        "iconPath": "pages/res/img/me_n.png",
+        "selectedIconPath": "pages/res/img/me_s.png"
+      }
+    ]
+  },
+  "debug": true
+  
+}

@@ -1,0 +1,65 @@
+/**home.wxss**/
+
+.homeRoot {
+  padding:0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiperStyle {
+  width: 100%;
+  height:22%;
+  background-color: #0f0;
+}
+
+.productMenus {
+  display: flex;
+  width: 100%;
+  height:18%;
+  background-color: #00f;
+  flex-direction: row;
+}
+
+
+.swiperItemImg {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperItemStyle {
+  width: 90%;
+  height: 100%;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.containerRoot {
+  height: 90%;
+}
+
+.test-bt {
+  background-color: #f00
+}
