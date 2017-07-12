@@ -1,4 +1,0 @@
-<!--me.wxml-->
-<view bindtap="back" data-hi="dsd">
-  <text>我是个人详细界面</text>
-</view>

@@ -1,42 +1,42 @@
 {
   "pages":[
-    "pages/demo/demo",
+    "pages/profile/profile",
+    "pages/index/index",
     "pages/home/home",
-    "pages/logs/logs",
-    "pages/me/me"
+    "pages/logs/logs"
   ],
-  "window":{ "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#aab", 
+  "window":{ 
+    "navigationBarBackgroundColor": "#35495e",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "依七铜器",
-    "navigationBarTextStyle":"white",
-    "backgroundColor": "#eeeeee",
-    "enablePullDownRefresh":true
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
   },
 
   "tabBar": {
-    "backgroundColor": "#aab", 
+    "color": "#ccc",
+    "selectedColor": "#35495e",
     "borderStyle": "white",
-    "position": "bottom",
-    "color": "#fff",
-    "selectedColor": "#1afa29",
+    "backgroundColor": "#f9f9f9",
     "list": [
-      {
-        "pagePath": "pages/demo/demo",
-        "text": "Demo",
-        "iconPath": "pages/res/img/home_n.png",
-        "selectedIconPath": "pages/res/img/home_s.png"
-      }, 
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "pages/res/img/home_n.png",
-        "selectedIconPath": "pages/res/img/home_s.png"
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/home-actived.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "购物车",
+        "iconPath": "images/icon/note.png",
+        "selectedIconPath": "images/icon/note-actived.png"
       }, 
       {
-        "pagePath": "pages/me/me",
-        "text": "个人测试",
-        "iconPath": "pages/res/img/me_n.png",
-        "selectedIconPath": "pages/res/img/me_s.png"
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/icon/profile.png",
+        "selectedIconPath": "images/icon/profile-actived.png"
       }
     ]
   },

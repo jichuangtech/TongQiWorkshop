@@ -1,0 +1,19 @@
+<!--profile.wxml-->
+<view class="wrapper">
+  <view class="wrapper-top">
+    <view  bindtap="bindViewTap" class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="wrapper-content b-l">
+    <ul class="menu-list b-l">
+      <li class="menu-item b-l">我的订单</li>
+      <li class="menu-item b-l">收获地址</li>
+      <li class="menu-item b-l">联系客服</li>
+    </ul>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
