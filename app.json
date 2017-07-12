@@ -34,7 +34,7 @@
       }, 
       {
         "pagePath": "pages/me/me",
-        "text": "个人",
+        "text": "个人测试",
         "iconPath": "pages/res/img/me_n.png",
         "selectedIconPath": "pages/res/img/me_s.png"
       }
