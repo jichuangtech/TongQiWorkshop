@@ -22,5 +22,11 @@ Page({
         userInfo: userInfo
       })
     })
+  },
+  phoneCall: function (e) {
+    console.log(78);
+    wx.makePhoneCall({
+      phoneNumber: "18850549612"
+    })
   }
 })

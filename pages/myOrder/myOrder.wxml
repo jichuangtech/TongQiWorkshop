@@ -1,0 +1,17 @@
+<!--myOrder.wxml-->
+<view class="wrapper">
+  <view class="wrapper-top">
+    <swiper class="swiperStyle" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{text}}">
+        <swiper-item style="width:150px;">
+          <view>{{item}}</view>
+        </swiper-item>
+      </block>
+  </swiper>
+  </view>
+  <view class="wrapper-content">
+    
+  </view>
+</view>
+
+

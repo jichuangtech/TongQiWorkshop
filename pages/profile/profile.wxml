@@ -6,12 +6,10 @@
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </view>
   </view>
-  <view class="wrapper-content b-l">
-    <ul class="menu-list b-l">
-      <li class="menu-item b-l">我的订单</li>
-      <li class="menu-item b-l">收获地址</li>
-      <li class="menu-item b-l">联系客服</li>
-    </ul>
+  <view class="wrapper-content menu-list b-l">
+    <navigator class="menu-item b-l" data-rel="auto" url="../myOrder/myOrder">我的订单</navigator>
+    <navigator class="menu-item b-l" url="../addressList/addressList">收获地址</navigator>
+    <view class="service-item menu-item b-l" bindtap="phoneCall">联系客服</view>
   </view>
   <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

@@ -1,11 +1,13 @@
 {
-  "pages":[
+  "pages": [
+    "pages/myOrder/myOrder",
     "pages/profile/profile",
     "pages/index/index",
     "pages/home/home",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/addressList/addressList"
   ],
-  "window":{ 
+  "window": {
     "navigationBarBackgroundColor": "#35495e",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "依七铜器",
@@ -13,7 +15,6 @@
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true
   },
-
   "tabBar": {
     "color": "#ccc",
     "selectedColor": "#35495e",
@@ -31,7 +32,7 @@
         "text": "购物车",
         "iconPath": "images/icon/note.png",
         "selectedIconPath": "images/icon/note-actived.png"
-      }, 
+      },
       {
         "pagePath": "pages/profile/profile",
         "text": "我的信息",
@@ -41,5 +42,4 @@
     ]
   },
   "debug": true
-  
 }

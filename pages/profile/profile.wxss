@@ -7,27 +7,6 @@
   margin-bottom: 20rpx;
   padding: 20rpx 0;
 }
-.menu-list .menu-item{
-  background-color: #fff;
-  border-top:1px solid #f2f2f2;
-  color:#777;
-  font-size: 14px;
-  margin-bottom: 10rpx;
-  padding: 15px 0 15px 15px;
-  position: relative;
-}
-.menu-list .menu-item::after{
- position: absolute;
- content: "";
- right: 15px;
- top: 50%;
- border-top:1px solid #bbb; 
- border-right:1px solid #bbb; 
- height: 10px;
- width: 10px;
- -webkit-transform: rotate(45deg) translateY(-50%);
-          transform: rotate(45deg) translateY(-50%);
-}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -40,12 +19,44 @@
   margin: 0 auto;
   border-radius: 50%;
 }
-
 .userinfo-nickname {
   color: #aaa;
   margin-top: 10px;
 }
-
-.usermotto {
-  margin-top: 200px;
+.menu-list .menu-item{
+  background-color: #fff;
+  border-top:1px solid #f2f2f2;
+  color:#777;
+  font-size: 14px;
+  margin-bottom: 10rpx;
+  padding: 15px 0 15px 45px;
+  position: relative;
+  background-image: url('../../images/icon/address-icon.png');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 21px;
+}
+.menu-list .menu-item:first-child{
+  background-image: url('../../images/icon/order-icon.png');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 21px;
+}
+.menu-list .menu-item:last-child{
+  background-image: url('../../images/icon/service-icon.png');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 21px;
+}
+.menu-list .menu-item::after{
+ position: absolute;
+ content: "";
+ right: 15px;
+ top: 50%;
+ border-top:1px solid #bbb; 
+ border-right:1px solid #bbb; 
+ height: 10px;
+ width: 10px;
+ -webkit-transform: rotate(45deg) translateY(-50%);
+          transform: rotate(45deg) translateY(-50%);
 }
