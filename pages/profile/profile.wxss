@@ -1,7 +1,3 @@
-.wrapper{
-  background-color: #f4f5f7;
-  height: 100%;
-}
 .wrapper-top{
   background-color: #fff;
   margin-bottom: 20rpx;

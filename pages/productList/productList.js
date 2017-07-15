@@ -1,26 +1,29 @@
-// myOrder.js
+// productList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabInfo: [
-      {tabName: '全部', tabStatus: 0},
-      {tabName: '待付款', tabStatus: 1},
-      {tabName: '已付款', tabStatus: 2},
-      {tabName: '已收货', tabStatus: 3}
-    ],
-    currentId:0
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-  },
+    console.log("88:" + options.productName);
+    var that = this;
+    that.setData({
+      title: options.productName
+    });
 
+    wx.setNavigationBarTitle({
+      title: that.data.title//页面标题为路由参数
+    })
+   // Page.setTitle(that.title);
+  },
+   
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -70,11 +73,10 @@ Page({
   
   },
 
-  //获取订单
-  getOrderList:function(e){
-    let id = e.currentTarget.dataset.status;
-    this.setData({
-      currentId: id
+  //设置页面title
+  setTitle:function(title){
+    wx.setNavigationBarTitle({
+      title: title//页面标题为路由参数
     })
   }
 })

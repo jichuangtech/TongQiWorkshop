@@ -2,34 +2,24 @@
 <import src="../widget/menuItem.wxml" />
 
 <!--home.wxml-->
-<view class="homeRoot">
-
+<view class="wrapper">
   <!-- 1顶部广告栏-->
   <swiper
-    class="swiperStyle"
+    class="swiper-wrapper"
     indicator-dots="true" 
     autoplay="true" 
     interval="2000"
     duration="1000">
-
     <block wx:for="{{adImgRes}}">
         <swiper-item>
-          <image src="{{item}}" class="swiperItemImg"/>
+          <image src="{{item}}" class="swiper-img"/>
         </swiper-item>
     </block>
-
   </swiper>
 
   <!-- 2中间的产品菜单-->
-
-  <view class="productMenus" >
+  <view class="product-menu" >
     <template wx:for="{{productMenus}}" wx:for-item="menuItemData" is="menuItem" data="{{...menuItemData}}"/>
   </view>
-
-  <!-- 测试按钮区域 -->
-  <button bindtap="insertMenu">插入菜单</button>
-  <button bindtap="fectMenu">获取菜单</button>
-  <button bindtap="updateMenu">修改菜单</button>
-
-  <!-- 3底部进行 scroll-view 的 热门产品展示 -->
+ <!-- 3底部进行 scroll-view 的 热门产品展示 -->
 </view>

@@ -9,19 +9,24 @@ Page({
     productMenus:[
       {
         icon:'../res/img/zhutai.png',
-        name:'xxx',
+        name:'床品套件',
         remark: 'xxxx'
       },
       {
         icon:'../res/img/xianglu.png',
-        name:'xxxx',
+        name:'枕头',
         remark: 'xxxx'
       },
       {
         icon:'../res/img/zhutai.png',
-        name:'xxxx',
+        name:'桌椅',
         remark: 'xxxx'
       },
+      {
+        icon: '../res/img/zhutai.png',
+        name: '桌椅',
+        remark: 'xxxx'
+      }
 
     ],
     

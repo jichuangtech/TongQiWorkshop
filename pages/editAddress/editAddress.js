@@ -1,17 +1,11 @@
-// myOrder.js
+// editAddress.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabInfo: [
-      {tabName: '全部', tabStatus: 0},
-      {tabName: '待付款', tabStatus: 1},
-      {tabName: '已付款', tabStatus: 2},
-      {tabName: '已收货', tabStatus: 3}
-    ],
-    currentId:0
+  
   },
 
   /**
@@ -68,13 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  //获取订单
-  getOrderList:function(e){
-    let id = e.currentTarget.dataset.status;
-    this.setData({
-      currentId: id
-    })
   }
 })

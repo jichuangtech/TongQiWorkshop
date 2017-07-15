@@ -1,1 +1,24 @@
 /* myOrder.wxss */
+.order-tabs{
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+.order-tabs .order-tab{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100px;
+}
+.order-tabs .order-tab.active:after{
+  position: absolute;
+  content: "";
+  background-color: #1aad19;
+  height: 2px;
+  width: 50px;
+  left: 25px;
+  bottom: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}

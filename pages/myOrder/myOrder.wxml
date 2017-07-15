@@ -1,13 +1,11 @@
 <!--myOrder.wxml-->
 <view class="wrapper">
   <view class="wrapper-top">
-    <swiper class="swiperStyle" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{text}}">
-        <swiper-item style="width:150px;">
-          <view>{{item}}</view>
-        </swiper-item>
+    <scroll-view class="order-tabs" scroll-x="true">
+    <block wx:for="{{tabInfo}}">
+      <view class="order-tab {{currentId == item.tabStatus ? 'active': ''}}" data-status="{{item.tabStatus}}"bindtap="getOrderList">{{item.tabName}}</view>
       </block>
-  </swiper>
+    </scroll-view>
   </view>
   <view class="wrapper-content">
     

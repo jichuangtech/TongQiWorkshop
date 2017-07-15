@@ -1,19 +1,17 @@
 @import './pages/widget/menuItem.wxss';
 
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-} 
 /*公共样式  */
 page{
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+.wrapper {
+  background-color: #f4f5f7;
+  height: 100%;
+  width: 100%;
 }
 ui,li{
   margin: 0;
@@ -22,4 +20,21 @@ ui,li{
 }
 .b-l{
   display: block;
+}
+image{
+   height: 100%;
+   width: 100%;
+}
+.dis-box{
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+          box-align: center;
+  -webkit-box-pack: end;
+          box-pack: end;
+  
+}
+.flex-1{
+  -webkit-box-flex:1; 
+          box-flex:1; 
 }

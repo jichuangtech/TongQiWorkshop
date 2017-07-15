@@ -1,1 +1,31 @@
 /* addressList.wxss */
+.address-list{
+  padding-top: 10px;
+}
+.address-list .address-item{
+  background-color: #fff;
+  color: #141414;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+}
+.address-list .address-detail{
+  margin-top: 6px;
+}
+.address-list  .edit-address{
+  background-image: url('../../images/icon/edit-icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+  height: 14px;
+  width: 14px;
+}
+.add-btn{
+  color: #fff;
+  background-color: #1aad19;
+  border-radius: 5px;
+  margin: 25px auto 0;
+  padding: 10px 0;
+  text-align: center;
+  width: 100px;
+}
