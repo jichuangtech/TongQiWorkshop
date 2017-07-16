@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/editAddress/editAddress",
     "pages/home/home",
+    "pages/productList/productList",
     "pages/myOrder/myOrder",
     "pages/addressList/addressList",
     "pages/profile/profile",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/productList/productList",
-    "pages/editAddress/editAddress"
+    "pages/productDetail/productDetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#35495e",
