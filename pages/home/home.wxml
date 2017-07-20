@@ -19,7 +19,7 @@
 
   <!-- 2中间的产品菜单-->
   <view class="product-menu" >
-    <template wx:for="{{productMenus}}" wx:for-item="menuItemData" is="menuItem" data="{{...menuItemData}}"/>
+    <template wx:for="{{productType}}" wx:key="{{index}}" wx:for-item="menuItemData" is="menuItem" data="{{...menuItemData}}"/>
   </view>
  <!-- 3底部进行 scroll-view 的 热门产品展示 -->
   <view class="hot-product">

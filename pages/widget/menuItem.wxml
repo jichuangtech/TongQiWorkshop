@@ -1,6 +1,6 @@
 <template name="menuItem" >
-  <navigator class="menu-item" url="../productList/productList?productName={{name}}">
-    <image class="menu-icon" src="{{icon}}" />
-    <text class="menu-name">{{name}}</text>
+  <navigator class="menu-item" url="../productList/productList?productName={{item.name}}">
+    <image class="menu-icon" src="{{item.icon}}" />
+    <text class="menu-name">{{item.name}}</text>
   </navigator>
 </template>

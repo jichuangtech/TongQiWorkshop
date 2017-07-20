@@ -1,3 +1,4 @@
+
 //app.js
 App({
   onLaunch: function(option) {
@@ -26,7 +27,6 @@ App({
 
   globalData: {
     userInfo: null
-  },
-
+  }
 
 })
