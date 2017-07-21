@@ -30,11 +30,14 @@ image{
   display: box;
   -webkit-box-align: center;
           box-align: center;
-  -webkit-box-pack: end;
-          box-pack: end;
+  -webkit-box-pack: justify;
+          box-pack: justify;
   
 }
 .flex-1{
   -webkit-box-flex:1; 
           box-flex:1; 
+}
+.none{
+  display: none;
 }

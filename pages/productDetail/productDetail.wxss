@@ -1,1 +1,108 @@
 /* productDetail.wxss */
+.wrapper{
+  font-size:14px;
+}
+.product-info{
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 10px 15px;
+}
+.product-info .product-price{
+  color:#F40;
+}
+.product-info .product-num{
+  color: #8d8d8d
+}
+.product-info .remain-num{
+  min-width:100px;
+}
+.choose-colors{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  margin-top: 5px;
+  padding: 10px 15px;
+  position: relative;
+}
+.choose-colors:after{
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border: 1px solid transparent;
+  border-bottom-color: #969696;
+  border-right-color: #969696;
+  right: 15px;
+  top:13px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.product-detail {
+  margin-top: 30px;
+}
+.product-detail .detail-title{
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+  height: 1px;
+  position: relative;
+  width: 200px;
+}
+.product-detail .detail-title:after{
+  background-color: #f4f5f7;
+  position:absolute;
+  content: "商品详情";
+  left: 50%;
+  top:50%;
+  padding: 0 15px;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+
+}
+
+/*弹框  */
+.choose-dialog{
+    background: rgba(0, 0, 0, 0.62);
+    height: 100%;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.choose-dialog .dialog-wrapper{
+  background-color: #fff;
+  height: 300px;
+  padding: 0 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index:2;
+  /* -webkit-animation: showDialog 1s;
+          animation: showDialog 1s; */
+}
+@-webkit-keyframes showDialog {
+	0%{height:0}
+	100%{height:300px}
+}
+
+@keyframes showDialog {
+	0%{height:0}
+	100%{height:300px}
+}
+.dialog-wrapper .dialog-btns{
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.dialog-wrapper  .car-btn{
+  background-color: #fe7000;
+}
+.dialog-wrapper  .buy-btn{
+  background-color: #F40;
+}

@@ -60,7 +60,7 @@ Page({
         that.setData({
           productType:res.data
         });
-        console.log("赋值："+JSON.stringify(that.data.productType));
+      //  console.log("赋值："+JSON.stringify(that.data.productType));
       },
       fail: function () {
         console.log("注册失败");
