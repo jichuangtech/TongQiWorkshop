@@ -23,9 +23,32 @@
     </view>
   </view>
 </view>
-<view class="choose-dialog {{dialogMark==0?'none':''}}" bindtap="hideDialog">
+<view class="choose-dialog {{dialogMark==0?'none':''}}" bindtap="">
   <view class="dialog-wrapper">
-    <view class="colors-type">颜色分类</view>
+    <view class="dialog-top dialog-item dis-box">
+      <view class="dialog-img"><image src="../res/img/benchi.jpg"></image></view>
+      <view class="flex-1">
+        <view class="main-color">￥10.0</view>
+        <view>库存12件</view>
+        <view>选择 颜色分类</view>
+      </view>
+    </view>
+    <view class="colors-select dialog-item">
+      <view>颜色分类</view>
+      <view class="colors-area">
+        <text class="color-item">西瓜红</text>
+        <text class="color-item">果绿</text>
+        <text class="color-item">天蓝</text>
+      </view>
+    </view>
+    <view class="buy-num dialog-item dis-box">
+      <view class="">购买数量</view>
+      <view class="set-num">
+        <text class="sub-btn set-btn fl {{inputNum==1?'unactive':''}}" bindtap="subNum">-</text>
+        <input class="num-input fl" type="num" value="{{inputNum}}"/>
+        <text class="add-btn set-btn fl" bindtap="setNum">+</text>
+      </view>
+    </view>
     <view class="dialog-btns dis-box">
       <view class="car-btn dialog-btn flex-1">加入购物车</view>
       <view class="buy-btn dialog-btn flex-1">立即购买</view>

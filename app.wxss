@@ -41,3 +41,9 @@ image{
 .none{
   display: none;
 }
+.main-color{
+  color: #F40;
+}
+.fl{
+  float: left;
+}
