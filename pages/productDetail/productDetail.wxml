@@ -36,9 +36,9 @@
     <view class="colors-select dialog-item">
       <view>颜色分类</view>
       <view class="colors-area">
-        <text class="color-item">西瓜红</text>
-        <text class="color-item">果绿</text>
-        <text class="color-item">天蓝</text>
+        <block wx:for="{{productInfo.colors}}">
+          <text class="color-item {{colorActive==item.id?'color-active':''}}" data-id='{{item.id}}' bindtap="colorBtn">{{item.colorName}}</text>
+        </block>
       </view>
     </view>
     <view class="buy-num dialog-item dis-box">

@@ -124,6 +124,9 @@
   margin-right: 10px;
   padding: 4px 6px;
 }
+.dialog-wrapper .color-item.color-active{
+  background-color: #F40;
+}
 .dialog-wrapper .set-num{
   text-align: center;
   width: 96px;

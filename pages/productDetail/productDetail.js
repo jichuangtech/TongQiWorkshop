@@ -6,10 +6,25 @@ Page({
       desc:"产品说明产品说明产品说明",
       name:"儿童裙",
       price:"12",
-      remainNum:300
+      remainNum:300,
+      colors:[
+      {
+          id:0,
+          colorName:"果绿"
+        },
+        {
+          id: 1,
+          colorName: "大红"
+        },
+        {
+        id: 2,
+          colorName: "天蓝"
+        }
+      ]
     },
-    dialogMark:0,
-    inputNum:1
+    dialogMark:1,
+    inputNum:1,
+    colorActive:-1
   },
 
   onLoad: function (options) {
@@ -63,6 +78,13 @@ Page({
     let num = this.data.inputNum - 1;
     this.setData({
       inputNum: num
+    })
+  },
+  //选择颜色
+  colorBtn:function(e){
+    let id = e.currentTarget.dataset.id;
+    this.setData({
+      colorActive: id
     })
   }
 })
