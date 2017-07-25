@@ -32,15 +32,7 @@ Page({
     ],
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this;
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
+    
   },
   onReady:function(){
     this.getProductType();
@@ -49,7 +41,7 @@ Page({
     var that = this;
     
     wx.request({
-      url: that.data.domain+'/milkteashopserver/api/productType/list', 
+      url: that.data.domain +'/clothshopserver/api/goodsCategory/list', 
       header: {
         'content-type': 'application/json'
       },

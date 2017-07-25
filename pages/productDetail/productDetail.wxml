@@ -1,4 +1,4 @@
-<!--productDetail.wxml-->
+
 <view class="wrapper">
   <swiper class="swiper-wrapper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
     <block wx:for="{{productInfo.productbanner}}">

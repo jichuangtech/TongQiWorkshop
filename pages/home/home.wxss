@@ -7,6 +7,7 @@
 .product-menu {
   background-color: #fff;
   margin: 5px 0;
+  padding-top: 18px;
   width: 100%;
 }
 .hot-product{
