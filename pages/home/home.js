@@ -39,7 +39,6 @@ Page({
   },
   getProductType:function(){
     var that = this;
-    
     wx.request({
       url: that.data.domain +'/clothshopserver/api/goodsCategory/list', 
       header: {
