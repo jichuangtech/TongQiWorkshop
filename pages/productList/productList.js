@@ -1,21 +1,20 @@
-// productList.js
+// productList.
+const config = require('../../config.js');
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    domain: config.domain,
+    typeId:"",
+    title:"",
+    list:""
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     console.log("88:" + options.productName);
     var that = this;
     that.setData({
-      title: options.productName
+      title: options.productName,
+      typeId:options.id
     });
 
     wx.setNavigationBarTitle({
@@ -24,55 +23,37 @@ Page({
    // Page.setTitle(that.title);
   },
    
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
-  
+    this.getProductList();
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
   
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+  //获取产品
+  getProductList(){
+    var that = this;
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+    console.log("产品具体");
+    wx.request({
+      url: this.data.domain + '/clothshopserver/api/goodsCategory/listGoods/' + this.data.typeId,
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      success: function (res) {
+        console.log("请求数据:" + res);
+        console.log(typeof res);
+        that.setData({
+          list: res.data
+        });
+      },
+      fail: function () {
+        console.log("注册失败");
+      }
+    });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
-
   //设置页面title
   setTitle:function(title){
     wx.setNavigationBarTitle({

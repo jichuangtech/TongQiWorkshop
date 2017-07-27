@@ -1,30 +1,23 @@
 <!--productList.wxml-->
 <view class="wrapper">
-  <view class="wrapper-top">
+  <!-- <view class="wrapper-top">
       <image src="../res/img/product1.jpg"></image>
-  </view>
+  </view> -->
   <view class="wrapper-content">
     <view class="product-list">
-      <view class="list-item dis-box">
-        <image class="item-img" src="../res/img/product1.jpg"></image>
-        <view class="item-info flex-1">
-          <view class="item-desc">说明说明什么什么</view>
-          <view class="">
-            <view class="item-price">￥10</view>
-            <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
+      <block wx:for="{{list}}">
+        <view class="list-item dis-box">
+          <image class="item-img" src="../res/img/product1.jpg"></image>
+          <view class="item-info flex-1">
+            <view class="item-desc">说明说明什么什么</view>
+            <view class="">
+              <view class="item-price">￥10</view>
+              <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
+            </view>
           </view>
         </view>
-      </view>
-      <view class="list-item dis-box">
-        <image class="item-img" src="../res/img/product1.jpg"></image>
-        <view class="item-info flex-1">
-          <view class="item-desc">说明说明什么什么</view>
-          <view class="">
-            <view class="item-price">￥10</view>
-            <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
-          </view>
-        </view>
-      </view>
+      
+      </block>
     </view>
   </view>
 </view>
