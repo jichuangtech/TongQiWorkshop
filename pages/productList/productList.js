@@ -34,20 +34,17 @@ Page({
   //获取产品
   getProductList(){
     var that = this;
-
-    console.log("产品具体");
     wx.request({
-      url: this.data.domain + '/clothshopserver/api/goodsCategory/listGoods/' + this.data.typeId,
+      url: that.data.domain + '/api/goodsCategories/' + that.data.typeId+'/goods',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET',
       success: function (res) {
-        console.log("请求数据:" + res);
-        console.log(typeof res);
         that.setData({
           list: res.data
         });
+        console.log("请求数据:" + JSON.stringify(that.data.list));
       },
       fail: function () {
         console.log("注册失败");

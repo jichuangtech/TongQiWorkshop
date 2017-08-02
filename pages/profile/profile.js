@@ -22,6 +22,9 @@ Page({
         userInfo: userInfo
       })
     })
+    console.log("用户信息" + that.data.userInfo);
+    console.log("用户信息" + JSON.stringify(that.data.userInfo));
+    console.log(that.data.userInfo[0]);
   },
   phoneCall: function (e) {
     console.log(78);

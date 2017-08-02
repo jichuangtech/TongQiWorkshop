@@ -40,18 +40,16 @@ Page({
   getProductType:function(){
     var that = this;
     wx.request({
-      url: that.data.domain +'/clothshopserver/api/goodsCategory/list', 
+      url: that.data.domain +'/api/goodsCategories', 
       header: {
         'content-type': 'application/json'
       },
       method: 'GET',
       success: function (res) {
-        console.log("请求数据:" + res);
-        console.log(typeof res);
         that.setData({
           productType:res.data
         });
-      //  console.log("赋值："+JSON.stringify(that.data.productType));
+        console.log("赋值："+JSON.stringify(that.data.productType));
       },
       fail: function () {
         console.log("注册失败");

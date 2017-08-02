@@ -5,18 +5,17 @@
   </view> -->
   <view class="wrapper-content">
     <view class="product-list">
-      <block wx:for="{{list}}">
+      <block wx:for="{{list}}" wx:key="{{index}}">
         <view class="list-item dis-box">
           <image class="item-img" src="../res/img/product1.jpg"></image>
           <view class="item-info flex-1">
-            <view class="item-desc">说明说明什么什么</view>
+            <view class="item-desc">{{item.goodsName}}</view>
             <view class="">
               <view class="item-price">￥10</view>
-              <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
+              <navigator class="item-btn" url="../productDetail/productDetail?id={{item.goodsId}}">去看看</navigator>
             </view>
           </view>
         </view>
-      
       </block>
     </view>
   </view>

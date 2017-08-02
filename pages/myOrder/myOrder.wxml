@@ -1,5 +1,6 @@
 <!--myOrder.wxml-->
 <view class="wrapper">
+
   <view class="wrapper-top">
     <scroll-view class="order-tabs" scroll-x="true">
     <block wx:for="{{tabInfo}}">
@@ -7,8 +8,39 @@
       </block>
     </scroll-view>
   </view>
+
   <view class="wrapper-content">
-    
+    <block wx:for="{{productType}}">
+      <view class="order-item">
+
+        <view class="item-top">
+          <view class="order-id i-b">
+            订单编号：<text>{{item.orderSn}}</text>
+          </view>
+          <view class="order-status i-b fr" wx:if="{{item.orderStatus==1 || item.orderStatus==3}}">{{tabInfo[item.orderStatus].tabName}}</view>
+        </view>
+        <block wx:for="{{item.goodsVO}}">
+          <view class="item-middle">
+            <image class="item-img" src="../res/img/product1.jpg"></image>
+            <view class="item-info flex-1">
+              <view class="item-desc">{{item.goodsName}}</view>
+              <view class="item-num-price">
+                <text class="item-num i-b">X{{item.goodsNum}}</text>
+                <text>${{item.goodsPrice}}/件</text>
+              </view>
+            </view>
+          </view>
+         </block>
+
+        <view class="item-bottom">
+          <view class="i-b">
+            金额：<text class="main-color">￥12.00</text>
+          </view>
+          <view class="item-btn i-b fr">立即支付</view>
+        </view>
+
+      </view>
+    </block>
   </view>
 </view>
 

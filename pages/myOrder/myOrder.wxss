@@ -1,8 +1,10 @@
 /* myOrder.wxss */
 .order-tabs{
   background-color: #fff;
-  height: 30px;
-  line-height: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 15px;
   white-space: nowrap;
 }
 .order-tabs .order-tab{
@@ -21,4 +23,81 @@
   bottom: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.order-item{
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 8px;
+  padding: 0 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+.order-item .item-top{
+  font-size: 12px;
+  padding: 10px 0;
+  position: relative;
+}
+.order-item .item-top::after{
+  background-color: #e5e5e5;
+  content: "";
+  position: absolute;
+  left: 0;
+  right:-10px;
+  bottom: 0;
+  height: 1px;
+}
+.order-item  .item-middle{
+  padding: 5px 0;
+  position: relative;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: stretch;
+          box-align: stretch;
+}
+.order-item  .item-middle:not(:lasr-child)::after{
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: -10px;
+}
+.order-item .item-img{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+.order-item .item-info{
+  position: relative;
+  width: 100%;
+}
+.order-item  .item-desc{
+  color: #3d3d3d;
+  position: absolute;
+  top:0;
+}
+.order-item  .item-num-price{
+  text-align: right;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+}
+.order-item .item-num{
+  text-align: center;
+  width: 80px;
+}
+.order-item  .item-bottom{
+  height: 24px;
+  padding: 10px 0; 
+}
+.order-item .item-btn{ 
+  background-color: #F40;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 0;
+  text-align: center;
+  width: 60px;
 }
