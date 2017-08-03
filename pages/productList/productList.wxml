@@ -4,6 +4,7 @@
       <image src="../res/img/product1.jpg"></image>
   </view> -->
   <view class="wrapper-content">
+
     <view class="product-list">
       <block wx:for="{{list}}" wx:key="{{index}}">
         <view class="list-item dis-box">
@@ -17,6 +18,8 @@
           </view>
         </view>
       </block>
+      <view class="load-tip" wx:if="{{loadMark}}">{{loadTip}}</view>
     </view>
+
   </view>
 </view>

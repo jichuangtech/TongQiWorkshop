@@ -1,5 +1,6 @@
-
 //app.js
+const config = require('config.js');
+
 App({
   onLaunch: function(option) {
     //调用API从本地缓存中获取数据
@@ -27,6 +28,6 @@ App({
 
   globalData: {
     userInfo: null
-  }
-
+  },
+  config: config
 })

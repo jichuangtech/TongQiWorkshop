@@ -1,35 +1,13 @@
 //homde.js
 //获取应用实例
-const config = require('../../config.js');
-var app = getApp()
+var app = getApp();
 Page({
   data: {
-    domain:config.domain,
+    domain: app.config.domain,
     productType:"",
     adImgRes: ['../res/img/benchi.jpg', '../res/img/iphone.jpg'],
-    productMenus:[
-      {
-        icon:'../res/img/zhutai.png',
-        name:'床品套件',
-        remark: 'xxxx'
-      },
-      {
-        icon:'../res/img/xianglu.png',
-        name:'枕头',
-        remark: 'xxxx'
-      },
-      {
-        icon:'../res/img/zhutai.png',
-        name:'桌椅',
-        remark: 'xxxx'
-      },
-      {
-        icon: '../res/img/zhutai.png',
-        name: '桌椅',
-        remark: 'xxxx'
-      }
-
-    ],
+    loadMark:true,
+    loadTip:"正在努力加载数据..."
   },
   onLoad: function () {
     
@@ -49,7 +27,15 @@ Page({
         that.setData({
           productType:res.data
         });
-        console.log("赋值："+JSON.stringify(that.data.productType));
+        if (that.data.productType.length!=0){
+          that.setData({
+            loadMark: false
+          });
+        }else{
+          that.setData({
+            loadTip: "暂时没有数据"
+          });
+        }
       },
       fail: function () {
         console.log("注册失败");

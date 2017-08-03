@@ -1,43 +1,72 @@
 // productDetail.js
+var app = getApp();
 Page({
   data: {
-    productInfo: {
-      productbanner: ['../res/img/benchi.jpg', '../res/img/iphone.jpg'],
-      desc:"产品说明产品说明产品说明",
-      name:"儿童裙",
-      price:"12",
-      remainNum:300,
-      colors:[
-      {
-          id:0,
-          colorName:"果绿"
-        },
-        {
-          id: 1,
-          colorName: "大红"
-        },
-        {
-        id: 2,
-          colorName: "天蓝"
-        }
-      ]
-    },
-    dialogMark:1,
+    domain: app.config.domain,
+    // productInfo: {
+    //   productbanner: ['../res/img/benchi.jpg', '../res/img/iphone.jpg'],
+    //   desc:"产品说明产品说明产品说明",
+    //   name:"儿童裙",
+    //   price:"12",
+    //   remainNum:300,
+    //   colors:[
+    //   {
+    //       id:0,
+    //       colorName:"果绿"
+    //     },
+    //     {
+    //       id: 1,
+    //       colorName: "大红"
+    //     },
+    //     {
+    //     id: 2,
+    //       colorName: "天蓝"
+    //     }
+    //   ]
+    // },
+    productInfo:{},
+    dialogMark:0,
     inputNum:1,
-    colorActive:-1
+    colorActive:-1,
+    productId:""
   },
 
   onLoad: function (options) {
-  
+    console.log("88:" + options.productName);
+    var that = this;
+    that.setData({
+      productId: options.id
+    });
   },
 
   onReady: function () {
-  
+    this.getProductDetail();
   },
 
   onShow: function () {
   
   },
+
+  //获取商品详情
+  getProductDetail:function(){
+    var that = this;
+    wx.request({
+      url: that.data.domain + '/api/goods/3',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          productInfo: res.data
+        });
+      },
+      fail: function () {
+        console.log("注册失败");
+      }
+    });
+  },
+
   chooseColors:function(e){
     this.setData({
       dialogMark: 1

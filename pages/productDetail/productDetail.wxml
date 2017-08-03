@@ -1,20 +1,20 @@
 
 <view class="wrapper">
   <swiper class="swiper-wrapper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
-    <block wx:for="{{productInfo.productbanner}}">
+    <!-- <block wx:for="{{1}}"> -->
         <swiper-item>
-          <image src="{{item}}" class="swiper-img"/>
+          <image src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{productInfo.originalImg==''?'../res/img/product-default.png':productInfo.originalImg}}" class="swiper-img"/>
         </swiper-item>
-    </block>
+    <!-- </block> -->
   </swiper>
   <view class="wrapper-content">
     <view class="product-info">
-      <view class="product-desc">{{productInfo.desc}}</view>
-      <view class="product-name">{{productInfo.name}}</view>
-      <view class="product-price">￥{{productInfo.price}}</view>
+      <view class="product-desc">{{productInfo.goodsContent}}</view>
+      <view class="product-name">{{productInfo.goodsName}}</view>
+      <view class="product-price">￥{{productInfo.costPrice}}</view>
       <view class="product-num dis-box">
         <view class="flex-1">运费：免运费</view>
-        <view class="remain-num">剩余：{{productInfo.remainNum}}</view>
+        <view class="remain-num">剩余：{{productInfo.storeCount}}</view>
       </view>
     </view>
     <view class="choose-colors" bindtap="chooseColors">选择 颜色分类</view>

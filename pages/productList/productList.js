@@ -1,12 +1,14 @@
 // productList.
-const config = require('../../config.js');
+var app = getApp();
 Page({
 
   data: {
-    domain: config.domain,
+    domain: app.config.domain,
     typeId:"",
     title:"",
-    list:""
+    list:"",
+    loadMark:true,
+    loadTip:"正在加载数据"
   },
 
   onLoad: function (options) {
@@ -20,7 +22,6 @@ Page({
     wx.setNavigationBarTitle({
       title: that.data.title//页面标题为路由参数
     })
-   // Page.setTitle(that.title);
   },
    
   onReady: function () {
@@ -44,17 +45,21 @@ Page({
         that.setData({
           list: res.data
         });
+        console.log("长度:" + that.data.list.length);
+        if(that.data.list.length!=0){
+          that.setData({
+            loadMark:false
+          })
+        }else{
+          that.setData({
+            loadTip: "暂时没有数据"
+          })
+        }
         console.log("请求数据:" + JSON.stringify(that.data.list));
       },
       fail: function () {
         console.log("注册失败");
       }
     });
-  },
-  //设置页面title
-  setTitle:function(title){
-    wx.setNavigationBarTitle({
-      title: title//页面标题为路由参数
-    })
   }
 })

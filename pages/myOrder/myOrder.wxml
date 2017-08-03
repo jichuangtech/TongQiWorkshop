@@ -10,7 +10,7 @@
   </view>
 
   <view class="wrapper-content">
-    <block wx:for="{{productType}}">
+    <block wx:for="{{orderList}}">
       <view class="order-item">
 
         <view class="item-top">
@@ -26,7 +26,7 @@
               <view class="item-desc">{{item.goodsName}}</view>
               <view class="item-num-price">
                 <text class="item-num i-b">X{{item.goodsNum}}</text>
-                <text>${{item.goodsPrice}}/件</text>
+                <text>￥{{item.goodsPrice}}/件</text>
               </view>
             </view>
           </view>
@@ -41,6 +41,7 @@
 
       </view>
     </block>
+    <view class="load-tip" wx:if="{{loadMark}}">{{loadTip}}</view>
   </view>
 </view>
 

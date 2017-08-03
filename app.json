@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/myOrder/myOrder",
+    "pages/productDetail/productDetail",
     "pages/home/home",
     "pages/profile/profile",
-    "pages/productDetail/productDetail",
     "pages/editAddress/editAddress",
     "pages/productList/productList",
     "pages/addressList/addressList",

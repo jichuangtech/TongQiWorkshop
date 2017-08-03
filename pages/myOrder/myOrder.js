@@ -1,7 +1,8 @@
 // myOrder.js
-const config = require('../../config.js');
+var app = getApp();
 Page({
   data: {
+    domain: app.config.domain,
     tabInfo: [
       {tabName: '全部', tabStatus: 0},
       {tabName: '待支付', tabStatus: 1},
@@ -9,8 +10,10 @@ Page({
       {tabName: '待收货', tabStatus: 3 },
       {tabName: '已完成', tabStatus: 4},
     ],
+    orderList:[],
     currentId:0,
-    domain: config.domain
+    loadMark:true,
+    loadTip:"正在加载数据..."
   },
 
   /**
@@ -26,14 +29,6 @@ Page({
   onReady: function () {
     this.getOrderList();
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
 
   //获取订单
   getOrderList:function(e){
@@ -54,15 +49,25 @@ Page({
       success: function (res) {
         
         that.setData({
-          productType: res.data
+          orderList: res.data
         });
-        //if (that.data.productType.lenghth){
-
-        //}
-        console.log("赋值：" + JSON.stringify(that.data.productType));
+        console.log("长度:" + that.data.orderList);
+        
+        if (that.data.orderList.lenghth){
+          that.setData({
+            loadMark: false
+          });
+        }else{
+          that.setData({
+            loadTip: "暂时没有数据"
+          });
+        }
+        console.log("赋值：" + JSON.stringify(that.data.orderList));
       },
       fail: function () {
-        console.log("注册失败");
+        that.setData({
+          loadTip: "数据加载失败"
+        });
       }
     });
   }

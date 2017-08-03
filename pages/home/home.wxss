@@ -7,6 +7,7 @@
 .product-menu {
   background-color: #fff;
   margin: 5px 0;
+  min-height: 80px;
   padding-top: 18px;
   width: 100%;
 }
