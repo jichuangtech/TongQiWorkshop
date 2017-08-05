@@ -45,20 +45,20 @@ Page({
         that.setData({
           list: res.data
         });
-        console.log("长度:" + that.data.list.length);
         if(that.data.list.length!=0){
           that.setData({
             loadMark:false
           })
         }else{
           that.setData({
+            loadMark:true,
             loadTip: "暂时没有数据"
           })
         }
-        console.log("请求数据:" + JSON.stringify(that.data.list));
       },
       fail: function () {
-        console.log("注册失败");
+        loadMark: true,
+        console.log("数据加载数据");
       }
     });
   }

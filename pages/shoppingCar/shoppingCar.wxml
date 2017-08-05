@@ -1,0 +1,41 @@
+<!--shoppingCar.wxml-->
+<view class="wrapper">
+  <view class="wrapper-top dis-box">
+    <view class="store-name flex-1">
+      <view class="select-radio {{allSelect?'active':'unactive'}}" bindtap="selectAll"></view>
+      店门
+    </view>
+    <view class="edit-list">编辑</view>
+  </view>
+
+  <view class="wrapper-content car-list">
+       <checkbox-group  bindchange="selectPro">   
+        <block wx:for="{{pro}}">
+            <view class="car-item dis-box">
+              <view class="item-select">
+                <label class="select-radio {{item.checked ? 'active':'unactive'}}">
+                  <checkbox  value="{{item.value}}" data-num="{{item.num}}" checked="{{item.checked}}" hidden="true"></checkbox>
+                </label>
+              </view>
+              <image class="item-image" src="../res/img/iphone.jpg"></image>
+              <view class="item-info flex-1">
+                <view class="name">{{item.name}}</view>
+                <view class="item-info-bottom">
+                  <text class="main-color i-b">￥{{item.price}}</text>
+                  <text class="num i-b">X{{item.num}}</text>
+                </view>
+              </view>
+            </view>
+        </block>
+       </checkbox-group>   
+  </view>
+
+  <view class="wrapper-footer dis-box">
+    <view class="select-all">
+      <view class="select-radio {{allSelect?'active':'unactive'}}" bindtap="selectAll"></view>
+      全选
+    </view>
+    <view class="count-money flex-1">合计：￥{{allMoney}}</view>
+    <view class="buy-btn  {{allMoney==0?'':'active'}}">结算</view>
+  </view>
+</view>

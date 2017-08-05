@@ -3,7 +3,7 @@
   <swiper class="swiper-wrapper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
     <!-- <block wx:for="{{1}}"> -->
         <swiper-item>
-          <image src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{productInfo.originalImg==''?'../res/img/product-default.png':productInfo.originalImg}}" class="swiper-img"/>
+          <image class="swiper-img" src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{productInfo.originalImg==''?'../res/img/product-default.png':productInfo.originalImg}}"></image>
         </swiper-item>
     <!-- </block> -->
   </swiper>
@@ -23,13 +23,13 @@
     </view>
   </view>
 </view>
-<view class="choose-dialog {{dialogMark==0?'none':''}}" bindtap="">
+<view class="choose-dialog {{dialogMark==0?'none':''}}" bindtap="hideDialog">
   <view class="dialog-wrapper">
     <view class="dialog-top dialog-item dis-box">
-      <view class="dialog-img"><image src="../res/img/benchi.jpg"></image></view>
+      <view class="dialog-img"><image src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{productInfo.originalImg==''?'../res/img/product-default.png':productInfo.originalImg}}"></image></view>
       <view class="flex-1">
         <view class="main-color">￥10.0</view>
-        <view>库存12件</view>
+        <view>库存{{productInfo.storeCount}}件</view>
         <view>选择 颜色分类</view>
       </view>
     </view>

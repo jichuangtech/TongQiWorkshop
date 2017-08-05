@@ -51,21 +51,20 @@ Page({
         that.setData({
           orderList: res.data
         });
-        console.log("长度:" + that.data.orderList);
-        
-        if (that.data.orderList.lenghth){
+        if (that.data.orderList.length!=0){
           that.setData({
             loadMark: false
           });
         }else{
           that.setData({
-            loadTip: "暂时没有数据"
+            loadMark: true,
+            loadTip: "暂时无对应的数据"
           });
         }
-        console.log("赋值：" + JSON.stringify(that.data.orderList));
       },
       fail: function () {
         that.setData({
+          loadMark: true,
           loadTip: "数据加载失败"
         });
       }

@@ -1,0 +1,82 @@
+/* shoppingCar.wxss */
+.wrapper{
+  font-size: 12px;
+}
+.wrapper-top{
+  height: 40px;
+  line-height: 40px;
+  padding:0  15px;
+}
+.wrapper-content .car-item {
+  background-color: #e5e5e5;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+}
+.wrapper-content .car-item .item-select{
+  width: 30px;
+}
+.wrapper-content .car-item .item-image{
+  margin-right: 10px; 
+  height: 60px;
+  width: 60px;
+}
+.wrapper-content .car-item .item-info{
+  height: 60px;
+  position: relative;
+}
+.wrapper-content .car-item .item-info .item-info-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.wrapper-content .car-item .item-info .item-info-bottom text{
+  width: 50%;
+}
+.wrapper-content .car-item .item-info .item-info-bottom .num{
+  text-align: right;
+}
+.wrapper-top  .edit-list{
+  width:50px;
+}
+.wrapper-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.wrapper-footer{
+  border-top:1px solid #e5e5e5;
+  font-size: 12px;
+  height: 50px;
+  padding-left: 15px;
+}
+.count-money{
+  text-align: right;
+  padding-right: 5px;
+}
+.wrapper-footer .buy-btn{
+  background-color: #e5e5e5;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  width: 100px;
+}
+.wrapper-footer .buy-btn.active{
+  background-color: #F40;
+  color:#fff;
+}
+.select-radio{
+  display: inline-block;
+  background-size: 18px 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+}
+.select-radio.unactive{
+  background-image: url(../../images/icon/select.png);
+}
+.select-radio.active{
+  background-image: url(../../images/icon/selected.png);
+}
