@@ -24,7 +24,7 @@ Page({
   selectPro:function(e){
     var pro = this.data.pro,
         checkArr = e.detail.value,
-        allMoney = 0.00,
+        allMoney = 0,
         countIndx = 0,
         allSelect = false;
     for (var i = 0; i < pro.length; i++) {
@@ -32,7 +32,7 @@ Page({
         pro[i].checked = true;
         console.log("当前");
         console.log((pro[i].num * pro[i].price).toFixed(2));
-        allMoney += (pro[i].num * pro[i].price).toFixed(2);
+        allMoney = (parseFloat(allMoney) + parseFloat(pro[i].num * pro[i].price)).toFixed(2);
         console.log("数量"+pro[i].num);
         
         pro[i].checked = true;

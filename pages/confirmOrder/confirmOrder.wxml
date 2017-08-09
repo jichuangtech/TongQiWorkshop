@@ -1,0 +1,17 @@
+<!--confirmOrder.wxml-->
+<view class="wrapper">
+
+  <view class="wrapper-top receive-address">
+    <view class="dis-box">
+      <view class="receiver-name flex-1">收货人：刘雪花</view>
+      <view class="receiver-phone">18850549612</view>
+    </view>
+    <view class="address-detail">收货地址：厦门市思明区瑞景商业广场</view>
+  </view>
+
+  <view class="wrapper-footer dis-box">
+    <view class="count-money flex-1">合计：39.9</view>
+    <view class="confirm-btn">提交订单</view>
+  </view>
+
+</view>
