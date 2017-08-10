@@ -24,29 +24,20 @@
   </view>
  <!-- 3底部进行 scroll-view 的 热门产品展示 -->
   <view class="hot-product">
-    <view class="hot-item">
-      <image class="item-img" src="../res/img/benchi.jpg"></image>
-      <view class="item-desc">产品说明产品说明产品说明</view>
-      <view class="dis-box">
-        <view class="item-price flex-1">￥10</view>
-        <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
+    <block  wx:for="{{hotProList}}" wx:key="{{index}}">
+      <view class="hot-item">
+        <image class="item-img" src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{item.originalImg==''?'../res/img/product-default.png':item.originalImg}}"></image> 
+        <view class="item-desc">{{item.goodsContent}}</view>
+        <view class="dis-box">
+          <view class="main-color flex-1">
+            <block wx:for="{{item.goodsSpecs}}">
+              <view class="">￥{{item.specPrice}}/{{item.specName}}</view>
+            </block>
+          </view>
+          <navigator class="item-btn" url="../productDetail/productDetail?id={{item.goodsId}}">去看看</navigator>
+        </view>
       </view>
-    </view>
-    <view class="hot-item">
-      <image class="item-img" src="../res/img/benchi.jpg"></image>
-      <view class="item-desc">产品说明产品说明产品说明</view>
-      <view class="dis-box">
-        <view class="item-price flex-1">￥10</view>
-        <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
-      </view>
-    </view>
-    <view class="hot-item">
-      <image class="item-img" src="../res/img/benchi.jpg"></image>
-      <view class="item-desc">产品说明产品说明产品说明</view>
-      <view class="dis-box">
-        <view class="item-price flex-1">￥10</view>
-        <navigator class="item-btn" url="../productDetail/productDetail">去看看</navigator>
-      </view>
-    </view>
+    </block>
+    <view class="load-tip" wx-if="{{hotProMark}}">{{hotProTip}}</view>
   </view>
 </view>

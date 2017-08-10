@@ -29,9 +29,6 @@
   color: #3d3d3d;
   margin: 10px 0 5px;
 }
-.hot-product .item-price{ 
-  color: #F40;
-}
 .hot-product .item-btn{ 
   background-color: #F40;
   border-radius: 3px;

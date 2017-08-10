@@ -65,7 +65,7 @@
   background-color: #F40;
   color:#fff;
 }
-.select-radio{
+/* .select-radio{
   display: inline-block;
   background-size: 18px 18px;
   background-position: center;
@@ -79,4 +79,4 @@
 }
 .select-radio.active{
   background-image: url(../../images/icon/selected.png);
-}
+} */

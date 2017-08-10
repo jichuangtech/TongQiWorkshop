@@ -70,7 +70,7 @@
 .dialog-wrapper{
   background-color: #fff;
   font-size: 14px;
-  height: 300px;
+  height: 310px;
   padding: 0 10px;
   position: absolute;
   left: 0;
@@ -124,6 +124,9 @@
 }
 .dialog-wrapper .color-item.color-active{
   background-color: #F40;
+}
+.dialog-wrapper  .price-type{
+  margin-top: 10px;
 }
 .dialog-wrapper .set-num{
   text-align: center;

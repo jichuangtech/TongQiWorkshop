@@ -11,7 +11,11 @@
     <view class="product-info">
       <view class="product-desc">{{productInfo.goodsContent}}</view>
       <view class="product-name">{{productInfo.goodsName}}</view>
-      <view class="product-price">￥{{productInfo.costPrice}}</view>
+      <view class="product-price">
+        <block wx:for="{{productInfo.goodsSpecs}}">
+            <view class="main-color">￥{{item.specPrice}}/{{item.specName}}</view>
+        </block>
+      </view>
       <view class="product-num dis-box">
         <view class="flex-1">运费：免运费</view>
         <view class="remain-num">剩余：{{productInfo.storeCount}}</view>
@@ -28,7 +32,9 @@
   <view class="dialog-top dialog-item dis-box">
     <view class="dialog-img"><image src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/cloth_goods_3_title"></image></view> 
     <view class="flex-1">
-      <view class="main-color">￥10.0</view>
+      <block wx:for="{{productInfo.goodsSpecs}}">
+          <view class="main-color">￥{{item.specPrice}}/{{item.specName}}</view>
+      </block>
       <view>库存{{productInfo.storeCount}}件</view>
       <view>选择 颜色分类</view>
     </view>
@@ -36,21 +42,32 @@
   <view class="colors-select dialog-item">
     <view>颜色分类</view>
     <view class="colors-area">
-      <block wx:for="{{productInfo.colors}}">
-        <text class="color-item {{colorActive==item.id?'color-active':''}}" data-id='{{item.id}}' bindtap="colorBtn">{{item.colorName}}</text>
+      <block wx:for="{{productInfo.goodsColors}}">
+        <text class="color-item {{colorActive==item.id?'color-active':''}}" data-id='{{item.id}}' data-type="1" bindtap="chooseType">{{item.colorName}}</text>
       </block>
+    </view>
+  </view>
+  <view class="dialog-item">
+    <view>规格</view>
+    <view class="price-type dis-box">
+      <block wx:for="{{productInfo.goodsSpecs}}">
+        <view class="flex-1">
+          <view class="select-radio {{priceTypeActive==item.specId?'active':'unactive'}}" data-id='{{item.specId}}' data-name='{{item.specName}}' data-type="2" bindtap="chooseType"></view>
+          {{item.specName}}
+        </view>
+      </block> 
     </view>
   </view>
   <view class="buy-num dialog-item dis-box">
     <view class="">购买数量</view>
     <view class="set-num">
-      <text class="sub-btn set-btn fl {{inputNum==1?'unactive':''}}" bindtap="subNum">-</text>
+      <text class="sub-btn set-btn fl {{inputNum==1?'unactive':''}}" data-type="1" bindtap="setNum">-</text>
       <input class="num-input fl" type="num" value="{{inputNum}}"/>
-      <text class="add-btn set-btn fl" bindtap="setNum">+</text>
+      <text class="add-btn set-btn fl" data-type="2" bindtap="setNum">+</text>
     </view>
   </view>
   <view class="dialog-btns dis-box">
-    <view class="car-btn dialog-btn flex-1">加入购物车</view>
+    <view class="car-btn dialog-btn flex-1" bindtap="addShoppingCar">加入购物车</view>
     <view class="buy-btn dialog-btn flex-1">立即购买</view>
   </view>
 </view>
