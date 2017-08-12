@@ -7,10 +7,27 @@
   line-height: 40px;
   padding:0  15px;
 }
+.wrapper-content{
+  padding-bottom: 50px;
+}
 .wrapper-content .car-item {
   background-color: #e5e5e5;
   margin-bottom: 10px;
   padding: 10px 15px;
+  position: relative;
+}
+.wrapper-content .car-item .del-btn{
+  position: absolute;
+  content: "";
+  top:0;
+  bottom: 0;
+  right: 0;
+  background-color: #FF0000;
+  color: #fff;
+  font-size: 16px;
+  line-height: 83px;
+  text-align: center;
+  width: 65px;
 }
 .wrapper-content .car-item .item-select{
   width: 30px;
@@ -39,12 +56,11 @@
   width:50px;
 }
 .wrapper-footer{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-}
-.wrapper-footer{
+  background-color: #fff;
   border-top:1px solid #e5e5e5;
   font-size: 12px;
   height: 50px;
@@ -65,18 +81,3 @@
   background-color: #F40;
   color:#fff;
 }
-/* .select-radio{
-  display: inline-block;
-  background-size: 18px 18px;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 18px;
-  width: 18px;
-  vertical-align: middle;
-}
-.select-radio.unactive{
-  background-image: url(../../images/icon/select.png);
-}
-.select-radio.active{
-  background-image: url(../../images/icon/selected.png);
-} */

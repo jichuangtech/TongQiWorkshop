@@ -1,12 +1,14 @@
 
 <view class="wrapper">
-  <swiper class="swiper-wrapper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
-    <!-- <block wx:for="{{1}}"> -->
+  <view class="wrapper-top">
+    <image class="swiper-img" src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{productInfo.originalImg}}"></image> 
+  </view>
+  <!-- <swiper class="swiper-wrapper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+      <block wx:for="{{1}}"> 
         <swiper-item>
-          <image class="swiper-img" src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/cloth_goods_3_title"></image> 
         </swiper-item>
-    <!-- </block> -->
-  </swiper>
+    </block>  
+  </swiper> -->
   <view class="wrapper-content">
     <view class="product-info">
       <view class="product-desc">{{productInfo.goodsContent}}</view>
@@ -24,6 +26,9 @@
     <view class="choose-colors" bindtap="chooseColors">选择 颜色分类</view>
     <view class="product-detail">
       <view class="detail-title"></view>
+      <block wx:for="{{productInfo.goodsDetailImages}}">
+        <image src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{item.imageUrl}}"></image>
+      </block>
     </view>
   </view>
 </view>
@@ -43,7 +48,7 @@
     <view>颜色分类</view>
     <view class="colors-area">
       <block wx:for="{{productInfo.goodsColors}}">
-        <text class="color-item {{colorActive==item.id?'color-active':''}}" data-id='{{item.id}}' data-type="1" bindtap="chooseType">{{item.colorName}}</text>
+        <text class="color-item {{colorActive==item.colorId?'color-active':''}}" data-id='{{item.colorId}}' data-type="1" bindtap="chooseType">{{item.colorName}}</text>
       </block>
     </view>
   </view>

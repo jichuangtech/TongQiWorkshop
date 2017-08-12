@@ -25,10 +25,7 @@ App({
       })
     }
   },
-
-  //查看商品详情
   
-
   globalData: {
     userInfo: null
   },

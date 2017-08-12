@@ -4,16 +4,13 @@
 <!--home.wxml-->
 <view class="wrapper">
   <!-- 1顶部广告栏-->
-  <swiper
-    class="swiper-wrapper"
-    indicator-dots="true" 
-    autoplay="true" 
-    interval="2000"
-    duration="1000">
-    <block wx:for="{{adImgRes}}">
-        <swiper-item>
-          <image src="{{item}}" class="swiper-img"/>
-        </swiper-item>
+  <swiper class="swiper-wrapper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+    <block wx:for="{{recommendList}}">
+      <swiper-item>
+        <navigator  url="../productDetail/productDetail?id={{item.goodsId}}">
+          <image src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{item.originalImg==''?'../res/img/product-default.png':item.originalImg}}" class="swiper-img"/>
+        </navigator>
+      </swiper-item>
     </block>
   </swiper>
 

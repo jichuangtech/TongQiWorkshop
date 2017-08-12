@@ -3,6 +3,10 @@
   width: 100%;
   height:22%;
 }
+.swiper-wrapper navigator{
+  height: 100%;
+  width: 100%;
+}
 
 .product-menu {
   background-color: #fff;

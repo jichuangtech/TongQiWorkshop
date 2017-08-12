@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/productDetail/productDetail",
     "pages/home/home",
-    "pages/confirmOrder/confirmOrder",
     "pages/shoppingCar/shoppingCar",
+    "pages/productDetail/productDetail",
+    "pages/confirmOrder/confirmOrder",
     "pages/myOrder/myOrder",
     "pages/profile/profile",
     "pages/editAddress/editAddress",
@@ -33,7 +33,7 @@
         "selectedIconPath": "images/icon/home-actived.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/shoppingCar/shoppingCar",
         "text": "购物车",
         "iconPath": "images/icon/note.png",
         "selectedIconPath": "images/icon/note-actived.png"

@@ -1,5 +1,7 @@
 // productDetail.js
 var app = getApp();
+//let toast = require('../../utils/toast/toast.js');
+
 Page({
   data: {
     domain: app.config.domain,
@@ -10,12 +12,6 @@ Page({
     colorActive:-1,
     priceTypeActive:-1,
     goodsVO:{
-      "goodsId": "",           //商品id
-      "goodsPrice": 0,    //商品价格
-      "goodsNum": 1,         //商品数量
-      "goodsName": "",  //商品名字
-      "specName": "",        //规格
-      "goodsSn": ""    //商品货号
     }
   },
 
@@ -39,19 +35,14 @@ Page({
   getProductDetail:function(){
     var that = this;
     wx.request({
-      url: that.data.domain + '/api/goods/3',
+      url: that.data.domain + '/api/goods/' + that.data.productId+'',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET',
       success: function (res) {
         that.setData({
-          productInfo: res.data,
-          goodsVO: {
-            "goodsId": res.data.goodsId,//商品id
-            "goodsName": res.data.goodsName,  //商品名字
-            "goodsSn": res.data.goodsSn    //商品货号
-          }
+          productInfo: res.data
         });
         console.log("初步赋值：" + JSON.stringify(that.data.goodsVO));
       },
@@ -115,19 +106,14 @@ Page({
   //选择颜色与价格规格
   chooseType:function(e){
     let id = e.currentTarget.dataset.id,
-      type = e.currentTarget.dataset.type;
+        type = e.currentTarget.dataset.type;
     if(type==1){
       this.setData({
         colorActive: id
       })
     }else{
-    let name = e.currentTarget.dataset.name;
-      
       this.setData({
-        priceTypeActive: id,
-        goodsVO: {
-          "specName": name,         //商品规格
-        }
+        priceTypeActive: id
       })
     }
   },
@@ -138,11 +124,11 @@ Page({
     wx.request({
       url: that.data.domain + '/api/goodsCart',
       data:{
-        "userId": 12,
-        "goodsId": 3,
-        "colorId": 3,
-        "goodsNum": 100,
-        "specId": 2
+          "userId": 12,
+          "goodsId": this.data.productId,
+          "colorId": this.data.colorActive,
+          "goodsNum": this.data.inputNum,
+          "specId": this.data.priceTypeActive
       },
       header: {
         'content-type': 'application/json'

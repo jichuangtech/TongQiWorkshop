@@ -1,6 +1,9 @@
 .wrapper{
   font-size:14px;
 }
+.wrapper-top{
+  height: 150px;
+}
 .product-info{
   background-color: #fff;
   line-height: 1.6;
@@ -41,6 +44,7 @@
 .product-detail .detail-title{
   border-bottom: 1px solid #ddd;
   margin: 0 auto;
+  margin-bottom: 20px;
   height: 1px;
   position: relative;
   width: 200px;
@@ -55,6 +59,13 @@
   -webkit-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
 
+}
+/* .product-detail image :first-child{
+  margin-top: 20px;
+} */
+.product-detail image{
+  height: 120px;
+  margin-bottom: 5px;
 }
 
 /*弹框  */
