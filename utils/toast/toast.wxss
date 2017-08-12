@@ -20,11 +20,11 @@
   width: 150px;
 
 }
-style="z-index:1080;display:flex;align-items:center;justify-content:space-around;position:fixed;top:30%;width:100%" 
+/*style="z-index:1080;display:flex;align-items:center;justify-content:space-around;position:fixed;top:30%;width:100%" */
 
 
 
-style="z-index:100;background:rgba(0,0,0,0.5);max-width:60%;"
+/*style="z-index:100;background:rgba(0,0,0,0.5);max-width:60%;"*/
 
 
-style="padding:60rpx;color:#fff;white-space:normal;word-break:break-all;">{{toastConf.text}}
+/*style="padding:60rpx;color:#fff;white-space:normal;word-break:break-all;">{{toastConf.text}}*/
