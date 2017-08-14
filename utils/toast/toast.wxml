@@ -1,5 +1,0 @@
-<view  class='fullbg' wx:if="{{toast.showMark}}">
-	<view class="container">
-    {{toast.showText}}
-	</view>
-</view> 

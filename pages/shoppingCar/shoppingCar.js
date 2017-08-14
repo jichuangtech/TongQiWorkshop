@@ -57,18 +57,23 @@ Page({
             pro: res.data
           });
           loadMark = false;
-          console.log("购物车长度：" + res.data.length + loadMark);
         }
-        console.log("购物车：" + JSON.stringify(that.data.pro));
+        that.setData({
+          load: {
+            loadMark: loadMark,
+            loadTip: loadTip
+          }
+        });
       },
       fail: function () {
+        loadMark = false;
         loadTip = "网络连接失败";
-      }
-    });
-    that.setData({
-      load: {
-        loadMark: loadMark,
-        loadTip: loadTip
+        that.setData({
+          load: {
+            loadMark: loadMark,
+            loadTip: loadTip
+          }
+        });
       }
     });
   },
@@ -154,15 +159,21 @@ Page({
 
   //删除购物车
   delCarItem:function(e){
-    var carId = e.currentTarget.dataset.carid;
+    var that = this,
+        carId = e.currentTarget.dataset.carid;
     wx.request({
-      url: this.data.domain + '/api/goodsCart/' + carId+'',
+      url: that.data.domain + '/api/goodsCart/' + carId+'',
       header: {
         'content-type': 'application/json'
       },
-      method: 'GET',
+      method: 'DELETE',
       success: function (res) {
-        console.log("删除购物车");
+        if(res.data.statusCode==200){
+          app.showToast('删除成功', that, 3000);
+          that.onReady()
+        }else{
+          app.showToast('删除失败', that, 3000);
+        }
       },
       fail: function () {
         console.log("注册失败");

@@ -1,4 +1,4 @@
-
+<include src="../widget/toast.wxml" />
 <view class="wrapper">
   <view class="wrapper-top">
     <image class="swiper-img" src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{productInfo.originalImg}}"></image> 
@@ -67,7 +67,7 @@
     <view class="">购买数量</view>
     <view class="set-num">
       <text class="sub-btn set-btn fl {{inputNum==1?'unactive':''}}" data-type="1" bindtap="setNum">-</text>
-      <input class="num-input fl" type="num" value="{{inputNum}}"/>
+      <input class="num-input fl" type="num" value="{{inputNum}}" bindblur="inputNum"/>
       <text class="add-btn set-btn fl" data-type="2" bindtap="setNum">+</text>
     </view>
   </view>

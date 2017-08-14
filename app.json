@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/confirmOrder/confirmOrder",
+    "pages/myOrder/myOrder",
     "pages/home/home",
     "pages/shoppingCar/shoppingCar",
     "pages/productDetail/productDetail",
-    "pages/confirmOrder/confirmOrder",
-    "pages/myOrder/myOrder",
     "pages/profile/profile",
     "pages/editAddress/editAddress",
     "pages/productList/productList",
