@@ -20,9 +20,14 @@
             </view>
             <image class="item-image" src="http://www.jichuangtech.site/clothshopserver/api/goodsCategories/picture/{{item.originalImg}}"></image>
             <view class="item-info flex-1">
-              <view class="name">{{item.goodsName}}</view>
+              <view class="set-num {{editObj.editMark?'':'none'}}">
+                <text class="sub-btn set-btn fl {{inputNum==1?'unactive':''}}" data-type="1" bindtap="setNum">-</text>
+                <input class="num-input fl" type="num" value="{{item.goodsNum}}" bindblur="inputNum"/>
+                <text class="add-btn set-btn fl" data-type="2" bindtap="setNum">+</text>
+              </view>
+              <view class="name {{editObj.editMark?'none':''}}">{{item.goodsName}}</view>
               <view class="item-info-bottom">
-                <text class="main-color i-b">￥{{item.goodsPrice}}/{{item.specName}}</text>
+                <text class="main-color i-b">￥{{item.shopPrice}}/{{item.specName}}</text>
                 <text class="num i-b">X{{item.goodsNum}}</text>
               </view>
             </view>

@@ -117,3 +117,28 @@ image{
 }
 
 /*toast end*/
+
+/*商品数量输入与删减  */
+.set-num{
+  text-align: center;
+  width: 96px;
+}
+.set-btn{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  background-color: rgba(127,127,127,0.5);
+}
+.sub-btn.unactive{
+  background-color: rgba(127,127,127,0.2);
+}
+.num-input{
+  background-color: rgba(127,127,127,0.5);
+  display: inline-block;
+  margin: 0 3px;
+  height: 30px;
+  width: 30px;
+}

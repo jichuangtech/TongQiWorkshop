@@ -34,6 +34,7 @@
   margin-right: 15px;
 }
 .pro-item .item-info{
+  height: 50px;
   position: relative;
   width: 100%;
 }
@@ -48,9 +49,12 @@
   position: absolute;
   bottom:0;
 }
-.pro-item .item-num{
-  text-align: center;
-  width: 80px;
+.pro-item  .item-num-price text{
+ display: block;
+ width: 50%;
+}
+.pro-item .item-price{
+  text-align: left;
 }
 
 .wrapper-footer {

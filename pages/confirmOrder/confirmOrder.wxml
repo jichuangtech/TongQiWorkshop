@@ -14,9 +14,9 @@
       <image src="../res/img/benchi.jpg"></image>
       <view class="item-info  flex-1">
         <view class="item-desc">说明什么什么</view>
-        <view class="item-num-price">
-          <text class="item-num">X3</text>
-          <text>￥12/件</text>
+        <view class="item-num-price dis-box">
+          <text class="item-price main-color">￥12/件</text>
+          <text>X3</text>
         </view>
       </view>
     </view>

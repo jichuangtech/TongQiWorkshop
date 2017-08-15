@@ -1,6 +1,5 @@
 // shoppingCar.js
 var app = getApp();
-
 Page({
   data: {
     domain: app.config.domain,
@@ -92,7 +91,7 @@ Page({
         console.log(i + "");
         pro[i].checked = true;
         console.log("当前");
-        allMoney = (parseFloat(allMoney) + parseFloat(pro[i].goodsNum * pro[i].goodsPrice)).toFixed(2);
+        allMoney = (parseFloat(allMoney) + parseFloat(pro[i].goodsNum * pro[i].shopPrice)).toFixed(2);
         
         pro[i].checked = true;
         console.log("选中");
@@ -181,12 +180,25 @@ Page({
     });
   },
 
-  //toast
-  showToast:function(){
-    this.setData({
-      toast:{
-        toastMark:true
+  //购买数量增减
+  setNum: function (e) {
+    let type = e.currentTarget.dataset.type,
+        num = this.data.inputNum;
+    if (type == 1) {
+      if (this.data.inputNum == 1) {
+        return false;
       }
-    });
+      num = num - 1;
+    } else {
+      num = num + 1;
+    }
+    if (num > parseInt(this.data.storeCount)) {
+      app.showToast('嗷嗷，库存不足哦~', this, 3000);
+      num = this.data.storeCount;
+    }
+    this.setData({
+      inputNum: num,
+    })
+    console.log("数量赋值：" + JSON.stringify(this.data.goodsVO));
   }
 })
